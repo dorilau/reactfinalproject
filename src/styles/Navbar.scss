@@ -1,0 +1,72 @@
+.navbar {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure items are vertically centered */
+    min-width: 100%; /* Ensure the navbar takes the full width of the viewport */
+    padding: 0.2rem;
+    background-color: #97c699; /* Example background color */
+    border-radius: 10px;
+
+
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between logo and name-container */
+}
+  .logo {
+    max-width: 8%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+  
+  .branding {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adjust spacing between company name and slogan */
+    margin-left:2%;
+  }
+  
+  .company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0f4d17;
+    margin:0;
+  }
+  
+  .slogan {
+    font-size: 1rem;
+    color:#0f4d17;
+    margin: 0;
+  }
+  
+  .navbar-middle {
+    text-align: center;
+    margin-right: 40%;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color:#0f4d17;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
