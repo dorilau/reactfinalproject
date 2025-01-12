@@ -1,0 +1,65 @@
+@import './variables';
+
+.content {
+  display: flex;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/background.jpg');
+}
+
+.left-section, .right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Set background transparency to 50% */
+
+}
+
+.left-section {
+    flex-direction:column;
+    max-width:30%
+}
+
+.right-section{
+    max-width:70%;
+}
+
+.landing-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color:$primary-color;
+    text-align:center;
+  }
+
+.intro{
+    margin-top:8%;
+    padding:5%;
+    max-width:100%;
+    font-size: 1.2rem;
+    font-weight:400;
+    border-radius: 20px;
+    text-align:center;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.primary-text {
+  color: $primary-color;
+}
+
+.secondary-text {
+  color: $secondary-color;
+}
+
