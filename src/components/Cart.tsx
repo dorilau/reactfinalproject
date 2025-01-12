@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/ShoppingCart.scss'; 
+import '../styles/Cart.scss'; 
 
-const ShoppingCart = () => {
+const Cart = () => {
     return (
         <Link to="/cart">
             <img src="/assets/cart-icon.png" alt="Shopping Cart" className="cart-icon" />
@@ -10,4 +10,4 @@ const ShoppingCart = () => {
     );
 };
 
-export default ShoppingCart;
+export default Cart;

@@ -7,7 +7,7 @@ const LandingPage = () => {
       <div className="content">
         <div className="left-section">
          <p className="landing-heading">Welcome to<br></br> Paradise Nursery </p>
-         <Link to="./Products">
+         <Link to="/products">
           <button className="start-button">Get Started</button>
         </Link>        
         </div>

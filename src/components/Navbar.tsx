@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/Navbar.scss'
-import ShoppingCart from '../components/ShoppingCart';
+import Cart from './Cart';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Left Section: Logo and Branding */}
       <div className="navbar-left">
         <img src="./assets/logo.png" alt="Paradise Nursery Logo" className="logo" />
         <div className="branding">
@@ -14,16 +14,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Middle Section: Title */}
       <div className="navbar-middle">
         <h2 className="title">Plants</h2>
       </div>
 
-      {/* Right Section: Shopping Cart */}
       <div className="navbar-right">
         <div className="shopping-cart">
-          {/* Placeholder for Shopping Cart */}
-          <ShoppingCart />
+          <Cart />
         </div>
       </div>
     </nav>

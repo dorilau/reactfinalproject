@@ -1,20 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './pages/Landing';
-import ProductPage from './pages/Products'; // Assuming you have a ProductPage component
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store'; 
+import Navbar from './components/Navbar';
+import Products from './pages/Products';
 import ShoppingCartPage from './pages/ShoppingCart';
+import LandingPage from './pages/Landing';
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/products" element={<ProductPage />} />
-      <Route path="/shoppingcart" element={<ShoppingCartPage />} />
-    </Routes>
-  </Router>
+    <Provider store={store}>
+      <Router>
+        <ConditionalNavbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<ShoppingCartPage />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
-}
+};
+
+const ConditionalNavbar: React.FC = () => {
+  const location = useLocation();
+  const hideNavbarPaths = ['/']; 
+
+  return !hideNavbarPaths.includes(location.pathname) ? <Navbar /> : null;
+};
 
 export default App;
